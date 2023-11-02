@@ -1,16 +1,16 @@
 // Function to get randomly selected item from array //
-function getRandomItem(array) {
+export function getRandomItem(array) {
   const i = Math.floor(Math.random() * array.length);
   return array[i];
 }
 
 // Function to shuffle the order of items in array //
-function shuffleArray(array) {
+export function shuffleArray(array) {
   return array.sort((a, b) => Math.random() - 0.5)
 }
 
 // Function to get multiple choices including correct answer
-function getMultipleChoice(n, correctAnswer, array) {
+export function getMultipleChoice(n, correctAnswer, array) {
   const choicesSet = [];
   choicesSet.push(correctAnswer);
 
