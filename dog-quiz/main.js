@@ -59,7 +59,6 @@ async function loadQuiz() {
   const dogImageUrl = await fetchMessage(url_endpoint);
   const correctBreed = getBreedFromUrl(dogImageUrl);
   const breedChoices = getMultipleChoice(3, correctBreed, BREEDS);
-  console.log(breedChoices)
   
   return [dogImageUrl, correctBreed, breedChoices];
 }
@@ -68,3 +67,8 @@ async function loadQuiz() {
 
 const [imageUrl, correctAnswer, choicesSet] = await loadQuiz();
 renderQuiz(imageUrl, correctAnswer, choicesSet)
+
+// Fetch one more random image
+document.getElementById('next').addEventListener('click', function() {
+  location.reload();
+});

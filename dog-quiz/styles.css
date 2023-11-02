@@ -8,7 +8,11 @@ header {
   margin: 1em auto;
 }
 
-header h1, header h3 {
+header h2 {
+  color: rgb(120, 210, 148);
+}
+
+header h2, header h3 {
   text-align: center;
 }
 
@@ -18,3 +22,51 @@ main {
   flex-direction: column;
 }
 
+.image-container {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 0.25rem 2rem;
+  border: none;
+  padding: 5px;
+
+}
+
+.correct {
+  color: #ffffff;
+  background-color: rgb(79, 180, 79);
+}
+
+.incorrect {
+  color: #ffffff;
+  background-color: rgb(216, 101, 101);
+}
+
+.hidden {
+  display: none;
+}
+
+.next-button {
+  display: flex;
+  justify-content: center;
+}
+
+#next {
+  margin: 2rem 6rem;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: larger;
+  background-color: rgb(205, 192, 174);
+}
