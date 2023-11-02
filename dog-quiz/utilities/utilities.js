@@ -11,14 +11,13 @@ export function shuffleArray(array) {
 
 // Function to get multiple choices including correct answer
 export function getMultipleChoice(n, correctAnswer, array) {
-  const choicesSet = [];
-  choicesSet.push(correctAnswer);
+  const choicesSet = [correctAnswer];
 
   while (choicesSet.length < n) {
     let selectedChoice = getRandomItem(array);
     if (choicesSet.indexOf(selectedChoice) < 0) {
       choicesSet.push(selectedChoice);
     }
-    return shuffleArray(choicesSet)
   }
+  return shuffleArray(choicesSet)
 }
