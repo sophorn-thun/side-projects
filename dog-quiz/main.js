@@ -36,4 +36,15 @@ function renderButtons(choicesArray, correctAnswer) {
   })
 }
 
+// Function to add quiz to the page
+function renderQuiz(imgUrl, correctAnswer, choicesSet) {
+  const image = document.createElement("img");
+  image.setAttribute("src", imgUrl);
+  const container = document.getElementById('image-container');
+  container.addEventListener("load", () => {
+    container.replaceChildren(image);
+    renderButtons(choices, correctAnswer)
+  })
+}
+
 
