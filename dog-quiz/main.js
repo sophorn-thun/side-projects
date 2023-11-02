@@ -16,3 +16,24 @@ async function fetchMessage(url) {
   return message;
 }
 
+// Function to add multiple choice button to the page 
+function renderButtons(choicesArray, correctAnswer) {
+  function buttonHandler(e) {
+    if (e.target.value === correctAnswer) {
+      e.target.classList.add("correct");
+    } else {
+      e.target.classList.add("incorrect")
+
+      document.querySelector(`button[value="${correctAnswer}]`).classList.add("correct");
+    }
+  }
+  const options = document.getElementById("options");
+  choicesArray.map(choice => {
+    let button = document.createElement("button");
+    button.value = button.name = button.textContent = choice;
+    button.addEventListener('click', buttonHandler);
+    options.appendChild(button)
+  })
+}
+
+
