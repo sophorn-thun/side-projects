@@ -1,6 +1,6 @@
 # Dog Quiz Project
 
-This is the "Dog Quiz Project" directory within my "Side-Projects" repository. In this subdirectory, you'll find an engaging and educational web-based quiz about dog breeds, built with HTML5, CSS3, JavaScript, and utilizing the Dog CEO API.
+This is the "Dog Quiz Project" directory within my "Side-Projects" repository. In this subdirectory, you'll find an engaging and educational web-based quiz about dog breeds, built with HTML5, CSS3, JavaScript, and utilizing the Dog CEO API. Here is deployed version: (https://guessing-dog-breed.netlify.app)
 
 ## Features
 
