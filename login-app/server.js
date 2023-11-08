@@ -14,8 +14,6 @@ const db = new Low(adapter);
 await db.read();
 db.data ||= { users: [] }
 
-const rpID = "localhost";
-const protocol = "http";
 const port = 5000;
 
 app.use(express.static('public'));
@@ -29,7 +27,7 @@ function findUser(email) {
   if (results.length == 0) return undefined;
   return results[0];
 }
-// ADD HERE THE REST OF THE ENDPOINTS
+
 app.post("/auth/login", (req, res) => {
   const user = findUser(req.body.email);
   if (user) {
