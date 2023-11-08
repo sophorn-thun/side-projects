@@ -15,24 +15,22 @@
       <img src="./images/header.svg" alt="Unlock Illustration" />
     </div>
   </header>
-  <main>
-      <section class="page" id="home">
-          <header>
-              <h2>Welcome!<h2>
-          </header>
 
+  <main>
+      <section class="page home" id="home">
+          <h2>Welcome!<h2>
           <section class="logged_out">
               <p>You are currently logged out.</p>
-              <p><a href="/login" class="navlink">Log in</a>.</p>
-          </section>
-    
-          <section class="logged_in">
-              <p>You are currently logged in as <span class='account_name' class="navlink"></span>.</p>
-              <p>You can see details of your <a href='/account' class="navlink">Account</a></p>
-          </section>       
+              <p><a href="/login" class="navlink">Log in</a></p>
+          </section>  
       </section>
 
-      <section class="page"  id="register">
+      <section class="page-hidden logged_in">
+        <p>You are currently logged in as <span class='account_name' class="navlink"></span>.</p>
+        <p>You can see details of your <a href='/account' class="navlink">Account</a></p>
+      </section> 
+
+      <section class="page-hidden register"  id="register">
           <h2>Register</h2>
           <form id="formRegister">
             <fieldset>
@@ -52,7 +50,7 @@
         </form>
       </section>
 
-      <section class="page" id="login">
+      <section class="page-hidden login" id="login">
           <h2>Log In</h2>
 
           <form id="formLogin">
@@ -77,7 +75,7 @@
         </form>       
       </section>
 
-      <section class="page"  id="account">
+      <section class="page-hidden account"  id="account">
           <h2>My Account</h2>
           <dl>
               <dt>Name</dt>

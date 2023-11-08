@@ -161,3 +161,7 @@ form input:focus {
   border-color: var(--color3);
   background-color: white;
 }
+
+.page-hidden {
+  display: none;
+}
