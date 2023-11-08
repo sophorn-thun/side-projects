@@ -2,10 +2,10 @@
   --background-surface: #FFFFFF; 
   --primaryColor: #005F73; 
   --secondaryColor: #191b1b; 
-  --color3: #026e4a; 
-  --color4: #000000; 
+  --color3: #29755b; 
+  --color4: #dfede8; 
   --color5: #203a33;
-  --color6: #ddf0ed; 
+  --color6: #71938e; 
   --highlight: #BB3E03; 
   
   
@@ -83,7 +83,7 @@ h3 {
 
 button {
   display: block;
-  background-color: var(--color5);
+  background-color: var(--color6);
   border: 0;
   width: 80%;
   margin: 16px 10%;
@@ -113,7 +113,7 @@ main a.navlink {
 }
 
 fieldset {
-  background-color: var(--color6);
+  background-color: var(--color4);
   padding: 16px;
   border: 0;
   border-radius: 5px;
