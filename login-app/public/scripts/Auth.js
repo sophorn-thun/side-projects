@@ -13,6 +13,15 @@ const Auth = {
     } else {
       alert(response.message);
     }
+    // Credit management API storage for auto login
+    if (window.PasswordCredential && user.password) {
+      const credentials = new PasswordCredential({
+        id: user.email,
+        password: user.password,
+        name: user.name
+      })
+      navigator.credentials.store(credentials);
+    }
   },
   login: async (event) => {
     if (event)
@@ -23,16 +32,19 @@ const Auth = {
       password: document.getElementById("login_password").value,
     }
     const response = await loginUser(user);
-    Auth.postLogin(response, {
+    Auth.postLogin(response, { 
       ...user,
       name: response.name
-    })
+    });
   },
   logout: () => {
     Auth.isLoggedIn = false;
     Auth.account = null;
     Auth.updateStatus();
     Router.go("/");
+    if (window.PasswordCredential) {
+      navigator.credentials.preventSilentAccess();
+    }
   },
   register: async (event) => {
     event.preventDefault();
