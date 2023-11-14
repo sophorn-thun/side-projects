@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login App</title>
+  <title>Login Suite</title>
   <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -17,22 +18,22 @@
   </header>
 
   <main>
-      <section class="page home" id="home">
-          <h2>Welcome!<h2>
+      <section class="home" id="home">
+          <h2>Welcome to Login Suite!<h2>
           <section class="logged_out">
               <p>You are currently logged out.</p>
-              <p><a href="/login" class="navlink">Log in</a></p>
+              <p><a href="/login" class="navlink">Log in here</a></p>
           </section>  
       </section>
 
-      <section class="page-hidden logged_in">
+      <section class="page logged_in">
         <p>You are currently logged in as <span class='account_name' class="navlink"></span>.</p>
         <p>You can see details of your <a href='/account' class="navlink">Account</a></p>
       </section> 
 
-      <section class="page-hidden register"  id="register">
+      <section class="page register"  id="register">
           <h2>Register</h2>
-          <form id="formRegister">
+          <form id="formRegister" onsubmit="Auth.register(event)">
             <fieldset>
                 <label for="register_name">Name</label>
                 <input placeholder="Name" id="register_name"
@@ -50,10 +51,10 @@
         </form>
       </section>
 
-      <section class="page-hidden login" id="login">
+      <section class="page login" id="login">
           <h2>Log In</h2>
 
-          <form id="formLogin">
+          <form id="formLogin" onsubmit="Auth.login(event)">
             <fieldset>
                 <label for="login_email">E-mail</label>
                 <input placeholder="email" id="login_email"
@@ -70,21 +71,22 @@
             <button>Continue</button>
         
             <p>
-                <a href="/register" class="navlink">Register a new account instead</a> 
+                <a href="/register" class="navlink">Register here for new users</a> 
             </p>                   
         </form>       
       </section>
 
-      <section class="page-hidden account"  id="account">
-          <h2>My Account</h2>
+      <section class="page account"  id="account">
+          <h2>My Account detail:</h2>
           <dl>
-              <dt>Name</dt>
+              <dt>Name </dt>
               <dd class="account_name"></dd>
-              <dt>Email</dt>
+              <dt>Email </dt>
               <dd class="account_username"></dd>
           </dl>
-          <button>Log out</button>
+          <button onclick="Auth.logout()">Log out</button>
       </section>
     </main>
+      <script src="scripts/app.js" type="module"></script>
 </body>
 </html>

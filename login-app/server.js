@@ -14,7 +14,10 @@ const db = new Low(adapter);
 await db.read();
 db.data ||= { users: [] }
 
+const rpID = "localhost";
+const protocol = "http";
 const port = 5000;
+const expectedOrigin = `${protocol}://${rpID}:${port}`;
 
 app.use(express.static('public'));
 app.use(express.json());

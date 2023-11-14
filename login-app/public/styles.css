@@ -1,5 +1,5 @@
 :root {
-  --background-surface: #FFFFFF; 
+  --background-surface: #eeeeee; 
   --primaryColor: #005F73; 
   --secondaryColor: #191b1b; 
   --color3: #29755b; 
@@ -7,20 +7,20 @@
   --color5: #203a33;
   --color6: #71938e; 
   --highlight: #BB3E03; 
-  
-  
+
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  margin: 2rem;
+  height: 90vh;
   font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-surface);
 }
 
 .header {
   width: 100%;
   height: 150px;
-  background-color: var(--color3);
+  background-color: var(--color6);
 }
 
 header img {
@@ -38,7 +38,7 @@ header img {
 
 .header p {
   color: var(--color4);
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 600;
   padding-left: 2rem;
 }
@@ -56,7 +56,7 @@ h1 {
   margin: 0;
   text-align: center;
   padding: 10px 0 5px 0;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
 }
 
@@ -93,7 +93,7 @@ ul#menu {
 }
 
 h3 {
-  color: var(--color4);
+  color: var(--color3);
   font-weight: normal;
   padding-top: 15px;
   font-size: 17px;
@@ -109,10 +109,11 @@ button {
   border-radius: 40px;
   color: var(--color4);
   font-size: 16px;
+  cursor: pointer;
 }
 
 h2 {
-  color: var(--secondaryColor);
+  color: var(--color3);
   text-align: center;
   font-weight: normal;
   font-size: 18px;
@@ -162,6 +163,10 @@ form input:focus {
   background-color: white;
 }
 
-.page-hidden {
+.page {
   display: none;
+}
+
+dt {
+  font-weight: 600;
 }
