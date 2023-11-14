@@ -24,7 +24,7 @@ To access just the Dog Quiz Project, you can either:
 **Clone the entire repository and navigate to the Dog Quiz folder**:
    
    ```sh
-   git clone https://github.com/<your-username>/side-projects.git
+   git clone https://github.com/side-projects.git
    cd side-projects/dog-quiz```
 
 ## Acknowledgements
