@@ -3,6 +3,8 @@ import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node'
 import * as url from 'url';
 import bcrypt from 'bcryptjs';
+import schema from './public/scripts/user.schema.js';
+import validate from './public/scripts/validate.js';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -44,7 +46,7 @@ app.post("/auth/login", (req, res) => {
   }
 });
 
-app.post("/auth/register", (req, res) => {
+app.post("/auth/register", validate(schema), (req, res) => {
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(req.body.password, salt);
 
