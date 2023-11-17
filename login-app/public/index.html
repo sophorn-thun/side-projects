@@ -6,14 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Suite</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts/app.js" type="module"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>    
+  <script>
+    function loginFromGoogle(data) {
+        Auth.loginFromGoogle(data)
+    }
+</script>
 
 </head>
 
 <body>
   <header>
     <div class="header">
-      <p>Login Suite</p>
-      <img src="./images/header.svg" alt="Unlock Illustration" />
+      <p>LoginSuite</p>
+      <div class="header-img">
+        <img src="./images/header.svg" alt="Unlock Illustration">
+      </div>
+    
     </div>
   </header>
 
@@ -32,7 +42,7 @@
       </section> 
 
       <section class="page register"  id="register">
-          <h2>Register</h2>
+          <h1>Register</h1>
           <form id="formRegister" onsubmit="Auth.register(event)">
             <fieldset>
                 <label for="register_name">Name</label>
@@ -52,7 +62,7 @@
       </section>
 
       <section class="page login" id="login">
-          <h2>Log In</h2>
+          <h1>Log In</h1>
 
           <form id="formLogin" onsubmit="Auth.login(event)">
             <fieldset>
@@ -72,12 +82,32 @@
         
             <p>
                 <a href="/register" class="navlink">Register here for new users</a> 
-            </p>                   
+            </p>  
+            
+            <fieldset>
+              <div id="g_id_onload"
+                  data-client_id="651170163162-qhqedlqc90nqpsvibf9blu1f7moe93ho.apps.googleusercontent.com"
+                  data-context="signin"
+                  data-ux_mode="popup"
+                  data-callback="loginFromGoogle"
+                  data-auto_select="true"
+                  data-itp_support="true">
+              </div>
+
+              <div class="g_id_signin"
+                  data-type="standard"
+                  data-shape="pill"
+                  data-theme="filled_blue"
+                  data-text="continue_with"
+                  data-size="large"
+                  data-logo_alignment="left">
+              </div>
+            </fieldset>
         </form>       
       </section>
 
       <section class="page account"  id="account">
-          <h2>My Account detail:</h2>
+          <h1>My Account detail:</h1>
           <dl>
               <dt>Name </dt>
               <dd class="account_name"></dd>
@@ -87,6 +117,5 @@
           <button onclick="Auth.logout()">Log out</button>
       </section>
     </main>
-      <script src="scripts/app.js" type="module"></script>
 </body>
 </html>

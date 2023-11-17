@@ -37,6 +37,14 @@ const Auth = {
       name: response.name
     });
   },
+  autoLogin: async () => {
+    if (window.PasswordCredential) {
+      const credentials = await navigator.credentials.get({ password: true });
+      document.getElementById("login_email").value = credentials.id;
+      document.getElementById("login_password").value = credentials.password;
+      Auth.login();
+    }
+  },
   logout: () => {
     Auth.isLoggedIn = false;
     Auth.account = null;
@@ -45,6 +53,13 @@ const Auth = {
     if (window.PasswordCredential) {
       navigator.credentials.preventSilentAccess();
     }
+  },
+  loginFromGoogle: async (data) => {
+    const response = await API.loginFromGoogle(data)
+    Auth.postLogin(response, {
+        name: response.name, 
+        email: response.email
+    });
   },
   register: async (event) => {
     event.preventDefault();
@@ -92,7 +107,7 @@ const Auth = {
 }
 
 Auth.updateStatus();
-
+Auth.autoLogin();
 export default Auth;
 
 window.Auth = Auth;

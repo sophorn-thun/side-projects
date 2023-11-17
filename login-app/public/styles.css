@@ -3,15 +3,15 @@
   --primaryColor: #005F73; 
   --secondaryColor: #191b1b; 
   --color3: #29755b; 
-  --color4: #dfede8; 
-  --color5: #203a33;
-  --color6: #71938e; 
+  --color4: #eef0f0; 
+  --color5: #4f5555;
+  --color6: #444848; 
   --highlight: #BB3E03; 
 
 }
 
 body {
-  margin: 2rem;
+  margin: 0 2rem;
   height: 90vh;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--background-surface);
@@ -19,28 +19,27 @@ body {
 
 .header {
   width: 100%;
-  height: 150px;
+  height: 80px;
   background-color: var(--color6);
-}
-
-header img {
-  width: 50px;
-  height: 100%;
-  margin-right: 50px;
-  padding: 0.5rem 0;
-}
-
-.header {
+  max-width: 500px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+header img {
+  width: 50px;
+  height: 60px;
+  margin-right: 10px;
+  padding: 0.5rem 0;
+}
+
 .header p {
   color: var(--color4);
-  font-size: 26px;
+  font-size: 1.25rem;
   font-weight: 600;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 body>main {
@@ -51,49 +50,18 @@ body>main {
 }
 
 h1 {
-  background-color: var(--primaryColor);
+  background-color: var(--color5);
   color: white;
   margin: 0;
   text-align: center;
   padding: 10px 0 5px 0;
   font-size: 18px;
   font-weight: normal;
-}
-
-a.navlink {
-  color: var(--highlight);
-  padding: 8px;
-  text-decoration: none;
-}
-
-#linkHome {
-  display: block;
-  top: 5px;
-  left: 5px;
-}
-
-#linkOrder {
-  display: block;
-  top: 5px;
-  right: 5px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul#menu {
-  background-color: var(--color6);
-  margin: 4px 6px;
-  padding: 0px 12px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px silver;
-  padding-bottom: 20px;
+  border-radius: 7px;
 }
 
 h3 {
-  color: var(--color3);
+  color: var(--color5);
   font-weight: normal;
   padding-top: 15px;
   font-size: 17px;
@@ -101,7 +69,7 @@ h3 {
 
 button {
   display: block;
-  background-color: var(--color6);
+  background-color: var(--color5);
   border: 0;
   width: 80%;
   margin: 16px 10%;
@@ -113,18 +81,22 @@ button {
 }
 
 h2 {
-  color: var(--color3);
+  color: var(--color5);
   text-align: center;
   font-weight: normal;
   font-size: 18px;
 }
 
+.header-img {
+  display: flex;
+  justify-content: flex-end;
+}
 #home, #login, #register {
   text-align: center;
 }
 
 main a.navlink {
-  color: var(--color3);
+  color: var(--color5);
   font-weight: bold;
   text-decoration: underline;
   margin: 0;
@@ -141,7 +113,7 @@ fieldset {
 
 form label {
   display: block;
-  color: var(--color3);
+  color: var(--color5);
   font-size: 13px;
   margin-left: 16px;
   margin-bottom: 4px;
@@ -150,7 +122,7 @@ form label {
 
 form input {
   display: block;
-  border: 1px solid var(--color3);
+  border: 1px solid var(--color5);
   width: 94%;
   padding: 3%;
   border-radius: 20px;
