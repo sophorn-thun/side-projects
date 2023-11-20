@@ -18,7 +18,7 @@ db.data ||= { users: [] }
 
 const rpID = "localhost";
 const protocol = "http";
-c
+const port = process.env.PORT || 5000;
 const expectedOrigin = `${protocol}://${rpID}:${port}`;
 
 app.use(express.static('public'));
