@@ -18,7 +18,7 @@ db.data ||= { users: [] }
 
 const rpID = "localhost";
 const protocol = "http";
-const port = 5000;
+c
 const expectedOrigin = `${protocol}://${rpID}:${port}`;
 
 app.use(express.static('public'));
@@ -69,7 +69,7 @@ app.post("/auth/register", validate(schema), (req, res) => {
 
 
 app.get("*", (req, res) => {
-    res.sendFile(__dirname + "public/index.html"); 
+    res.sendFile(__dirname + "/public/index.html"); 
 });
 
 app.listen(port, () => {
