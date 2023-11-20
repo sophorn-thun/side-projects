@@ -8,9 +8,8 @@ Each folder in this repository represents a different project that I find intere
 
 ### Projects List
 
-- **Dog Breed Quiz**: Guess the breed of provided dog image. 
-
-> Note: Each project in this repository has its own README file for detailed information, installation instructions, and usage.
+- **Dog Breed Quiz**: Guess the breed of provided dog image. [https://guessing-dog-breed.netlify.app/]
+- **Login Suite**: User's validation, user's authentication with Google. [https://loginsuite-319d5ad7a11b.herokuapp.com/]
 
 ## Technologies & Tools
 
