@@ -8,6 +8,7 @@ Each folder in this repository represents a different project that I find intere
 
 ### Projects List
 
+- **Random Clock**: Random clock popping up using Javascript. [https://sophorn-thun.github.io/side-projects/random-clock/]
 - **Dog Breed Quiz**: Guess the breed of provided dog image. [https://guessing-dog-breed.netlify.app/]
 - **Login Suite**: User's validation, user's authentication with Google. [https://loginsuite-319d5ad7a11b.herokuapp.com/]
 
